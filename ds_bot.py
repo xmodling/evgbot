@@ -19,11 +19,6 @@ async def gen(ctx):
 @client.command(pass_context = True)
 async def code(ctx):
         await ctx.send("Не дам код")
-@client.command(pass_context = True)
-async def help(ctx):
-        await ctx.send('Волкодав - команды:'
-                       '1 ./help - просмотр команд.'
-                       '2. /gen - цитата волка.'
-                       )
+
 token = os.environ.get('BOT_TOKEN')
 client.run(token)
