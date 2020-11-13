@@ -1,7 +1,8 @@
+
 import discord
 from discord.ext import commands
 import random
-import
+import os
 file = open("quotes.txt", 'r')
 a = file.readlines()
 async def on_ready():
