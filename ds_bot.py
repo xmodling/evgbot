@@ -16,6 +16,10 @@ async def code(ctx):
         author = ctx.message.author
         await ctx.send(f'{author.mention},' + "\n" + "Не дам код")
 @client.command(pass_context = True)
+async def gname(ctx):
+        author = ctx.message.author
+        await ctx.send(f'{author.mention}' + ' ' - 'Твоё имя и фамилия на волчьем:' + '\n' + " " + " " + " " + " " +random.choice(["Неугомонный", "Сумасшедший", "Безбашенный", "Забивной", "Мудрый", "Жирый", "Влюблённый", "Злой", "Убитый", "Бездушный"]) + " " + random.choice(["Срун", "Попрыгунчик", "Мошенник", "Тяжеловес", "Змей", "Волк", "АльфаСрун", "Носкоман", "Оффник", "Трубочист"]))
+@client.command(pass_context = True)
 async def cmd(ctx):
         author = ctx.message.author
         await ctx.send(f'{author.mention},' + "\n" + " " + "Команды бандита:" + "\n" + " " + " " + "/gen - Рандомная цитата, способная взорвать твой мозг." + "\n" + " " + " " + "/code - Получить код бота." + "\n" + " " + " " + "/cmd - Список команд.")
