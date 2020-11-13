@@ -15,6 +15,9 @@ async def gen(ctx):
 async def code(ctx):
         author = ctx.message.author
         await ctx.send(f'{author.mention},' + "\n" + "Не дам код")
-
+@client.command(pass_context = True)
+async def cmd(ctx):
+        author = ctx.message.author
+        await ctx.send(f'{author.mention},' + "\n" + "Команды бандита:" + "\n" + "/gen - Рандомная цитата, способная взорвать твой мозг." + "\n" + "/code - нет" + "\n" + "/cmd - список команд")
 token = os.environ.get('BOT_TOKEN')
 client.run(token)
