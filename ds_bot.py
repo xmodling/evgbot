@@ -10,11 +10,11 @@ client = commands.Bot(command_prefix = '/')
 @client.command(pass_context = True)
 async def gen(ctx):
         author = ctx.message.author
-        await ctx.send(f'{author.mention},' + " " + "волкодав сгенерировал для тебя убийственную цитату:" + ":point_up:" + random.choice(a))
+        await ctx.send(f'{author.mention},' + "\n" + ":point_up:" + random.choice(a))
 @client.command(pass_context = True)
 async def code(ctx):
         author = ctx.message.author
-        await ctx.send(f'{author.mention},' + " " + "Не дам код")
+        await ctx.send(f'{author.mention},' + "\n" + "Не дам код")
 
 token = os.environ.get('BOT_TOKEN')
 client.run(token)
