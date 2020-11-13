@@ -25,3 +25,4 @@ async def help(ctx):
                        '2. /gen - цитата волка.'
                        )
 token = os.environ.get('BOT_TOKEN')
+client.run(token)
