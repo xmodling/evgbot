@@ -8,7 +8,7 @@ file = open("quotes.txt", 'r')
 a = file.readlines()
 client = commands.Bot(command_prefix = '/')
 @client.event
-async def on_ready(ctx):
+async def on_ready():
      while True:
           await client.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.watching, name = "/cmd."))
 @client.event
