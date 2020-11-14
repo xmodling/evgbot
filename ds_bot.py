@@ -8,9 +8,13 @@ file = open("quotes.txt", 'r')
 a = file.readlines()
 client = commands.Bot(command_prefix = '/')
 @client.event
-async def on_ready():
+async def on_ready(ctx):
+     await ctx.send('Волкодав прибыл и готов уничтожить ваш мозг! Команды - /cmd.')
      while True:
           await client.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.watching, name = "/cmd."))
+@client.event
+async def on_message(message):
+        print('Message from {0.author}: {0.content}'.format(message))
 @client.command(pass_context = True)
 async def gen(ctx):
         author = ctx.message.author
