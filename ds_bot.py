@@ -27,7 +27,7 @@ async def gname(ctx):
 async def displayembed():
     embed = discord.Embed(
         title = '***Команды бота-бандита:***',
-        description = ' **/gen** + '\n' + '*Рандомная цитата от волка.*' + '\n' + '\n' + '**/gname**' + '\n' + '\n' + '*Узнать своё имя на волчьем.*' + '\n' + '\n' + '**/code**' + '\n' + '\n' + '*Получить исходнык код бота.*',
+        description = '**/gen**' + '\n' + '*Рандомная цитата от волка.*' + '\n' + '\n' + '**/gname**' + '\n' + '\n' + '*Узнать своё имя на волчьем.*' + '\n' + '\n' + '**/code**' + '\n' + '\n' + '*Получить исходнык код бота.*',
         colour = discord.Colour.from_rgb(106, 192, 245)
     )
     await ctx.send(embed=embed)
