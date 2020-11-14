@@ -31,6 +31,6 @@ async def cmd(ctx):
         colour = discord.Colour.from_rgb(128, 0, 255)
     )
     await ctx.send(embed=embed1)
-@client.command(pass_context = True)
+
 token = os.environ.get('BOT_TOKEN')
 client.run(token)
