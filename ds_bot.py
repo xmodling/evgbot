@@ -7,6 +7,7 @@ from asyncio import sleep
 file = open("quotes.txt", 'r')
 a = file.readlines()
 client = commands.Bot(command_prefix = '/')
+client.remove_command('help')
 @client.event
 async def on_ready():
      while True:
