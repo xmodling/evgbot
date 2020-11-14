@@ -26,7 +26,7 @@ async def gname(ctx):
 @client.command(pass_context = True)
 async def cmd(ctx):
     embed1 = discord.Embed(
-        title = '**Команды бота-бандита:**',
+        title = '**Команды от волка:**',
         description = '**/gen**' + '\n' + '*Рандомная цитата от волка, способная взорвать твой мозг.*' + '\n' + '\n' + '**/gname**' + '\n'  + '*Узнать своё имя на волчьем(Волк сам придумает).*' + '\n' + '\n' + '**/code**' + '\n' + '*Получить исходнык код бота.*',
         colour = discord.Colour.from_rgb(128, 0, 255)
     )
