@@ -24,16 +24,13 @@ async def gname(ctx):
         author = ctx.message.author
         await ctx.send(f'{author.mention},' + '\n' + 'Твоё имя и фамилия на волчьем:' + '\n' + " " + " " + " " + " " + random.choice(["Неугомонный", "Сумасшедший", "Безбашенный", "Забивной", "Мудрый", "Жирный", "Влюблённый", "Злой", "Убитый", "Бездушный"]) + " " + random.choice(["Срун", "Попрыгунчик", "Мошенник", "Тяжеловес", "Змей", "Волк", "АльфаСрун", "Носкоман", "Оффник", "Трубочист"]))
 @client.command(pass_context = True)
-async def displayembed(ctx):
+async def cmd(ctx):
     embed1 = discord.Embed(
         title = '***Команды бота-бандита:***',
-        description = '**/gen**' + '\n' + '*Рандомная цитата от волка.*' + '\n' + '\n' + '**/gname**' + '\n' + '\n' + '*Узнать своё имя на волчьем.*' + '\n' + '\n' + '**/code**' + '\n' + '\n' + '*Получить исходнык код бота.*',
+        description = '**/gen**' + '\n' + '*Рандомная цитата от волка, способная взорвать твой мозг. Будь осторожен, я предупредил.*' + '\n' + '\n' + '**/gname**' + '\n' + '\n' + '*Узнать своё имя на волчьем(Волк сам придумает).*' + '\n' + '\n' + '**/code**' + '\n' + '\n' + '*Получить исходнык код бота.*',
         colour = discord.Colour.from_rgb(128, 0, 255)
     )
     await ctx.send(embed=embed1)
 @client.command(pass_context = True)
-async def cmd(ctx):
-        author = ctx.message.author
-        await ctx.send(f'{author.mention},' + "\n" + " " + "Команды бандита:" + "\n" + "\n" + " " + " " + "/gen - Рандомная цитата от волка, способная взорвать твой мозг, будь осторожен, я предупредил." + "\n" + "\n" + " " + " " + "/code - Получить код бота." + "\n" + "\n" + " " + " " + "/gname - Получить имя от волка(он сам придумал)" + "\n" + "\n" + " " + " " + "/cmd - Список команд.")
 token = os.environ.get('BOT_TOKEN')
 client.run(token)
