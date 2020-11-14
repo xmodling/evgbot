@@ -23,8 +23,8 @@ async def code(ctx):
 async def gname(ctx):
         author = ctx.message.author
         await ctx.send(f'{author.mention},' + '\n' + 'Твоё имя и фамилия на волчьем:' + '\n' + " " + " " + " " + " " + random.choice(["Неугомонный", "Сумасшедший", "Безбашенный", "Забивной", "Мудрый", "Жирный", "Влюблённый", "Злой", "Убитый", "Бездушный"]) + " " + random.choice(["Срун", "Попрыгунчик", "Мошенник", "Тяжеловес", "Змей", "Волк", "АльфаСрун", "Носкоман", "Оффник", "Трубочист"]))
-@client.command()
-async def displayembed():
+@client.command(pass_context = True)
+async def displayembed(ctx):
     embed1 = discord.Embed(
         title = '***Команды бота-бандита:***',
         description = '**/gen**' + '\n' + '*Рандомная цитата от волка.*' + '\n' + '\n' + '**/gname**' + '\n' + '\n' + '*Узнать своё имя на волчьем.*' + '\n' + '\n' + '**/code**' + '\n' + '\n' + '*Получить исходнык код бота.*',
