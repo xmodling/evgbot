@@ -28,12 +28,12 @@ async def displayembed(ctx):
     embed1 = discord.Embed(
         title = '***Команды бота-бандита:***',
         description = '**/gen**' + '\n' + '*Рандомная цитата от волка.*' + '\n' + '\n' + '**/gname**' + '\n' + '\n' + '*Узнать своё имя на волчьем.*' + '\n' + '\n' + '**/code**' + '\n' + '\n' + '*Получить исходнык код бота.*',
-        colour = discord.Colour.from_rgb(106, 192, 245)
+        colour = discord.Colour.from_rgb(128, 0, 255)
     )
     await ctx.send(embed=embed1)
 @client.command(pass_context = True)
 async def cmd(ctx):
         author = ctx.message.author
-        await ctx.send(f'{author.mention},' + "\n" + " " + "Команды бандита:" + "\n" + "\n" + " " + " " + "/gen - Рандомная цитата, способная взорвать твой мозг." + "\n" + "\n" + " " + " " + "/code - Получить код бота." + "\n" + "\n" + " " + " " + "/gname - Получить имя от волка(он сам придумал)" + "\n" + "\n" + " " + " " + "/cmd - Список команд.")
+        await ctx.send(f'{author.mention},' + "\n" + " " + "Команды бандита:" + "\n" + "\n" + " " + " " + "/gen - Рандомная цитата от волка, способная взорвать твой мозг, будь осторожен, я предупредил." + "\n" + "\n" + " " + " " + "/code - Получить код бота." + "\n" + "\n" + " " + " " + "/gname - Получить имя от волка(он сам придумал)" + "\n" + "\n" + " " + " " + "/cmd - Список команд.")
 token = os.environ.get('BOT_TOKEN')
 client.run(token)
