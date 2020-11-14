@@ -30,7 +30,7 @@ async def displayembed():
         description = '**/gen**' + '\n' + '*Рандомная цитата от волка.*' + '\n' + '\n' + '**/gname**' + '\n' + '\n' + '*Узнать своё имя на волчьем.*' + '\n' + '\n' + '**/code**' + '\n' + '\n' + '*Получить исходнык код бота.*',
         colour = discord.Colour.from_rgb(106, 192, 245)
     )
-    await ctx.send(embed=embed)
+    await client.say(embed=embed)
 @client.command(pass_context = True)
 async def cmd(ctx):
         author = ctx.message.author
