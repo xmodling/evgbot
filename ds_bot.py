@@ -10,7 +10,7 @@ client = commands.Bot(command_prefix = '/')
 @client.event
 async def on_ready():
      while True:
-          await client.change_presence(status=discord.Status.online, activity=discord.Watching("/cmd"))
+          await client.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.watching("/cmd")))
 @client.command(pass_context = True)
 async def gen(ctx):
         author = ctx.message.author
