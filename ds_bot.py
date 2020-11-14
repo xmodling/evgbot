@@ -3,10 +3,16 @@ import discord
 from discord.ext import commands
 import random
 import os
-
+from asyncio import sleep
 file = open("quotes.txt", 'r')
 a = file.readlines()
 client = commands.Bot(command_prefix = '/')
+@client.event
+async def on_ready():
+     while True:
+          await bot.change_presence(status=discord.Status.online, activity=discord.Game("WOLF_BOY"))
+          await sleep(15)
+          await bot.change_presence(status=discord.Status.online,activity=discord.Streaming("Grand Theft Auto San Andreas"))
 @client.command(pass_context = True)
 async def gen(ctx):
         author = ctx.message.author
