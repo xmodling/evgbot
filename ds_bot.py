@@ -11,9 +11,7 @@ client = commands.Bot(command_prefix = '/')
 async def on_ready():
      while True:
           await client.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.watching, name = "/cmd."))
-@client.event
-async def on_message(message):
-        print('Message from {0.author}: {0.content}'.format(message))
+
 @client.command(pass_context = True)
 async def gen(ctx):
         author = ctx.message.author
@@ -34,6 +32,8 @@ async def cmd(ctx):
         colour = discord.Colour.from_rgb(128, 0, 255)
     )
     await ctx.send(embed=embed1)
-
+@client.event
+async def on_message(message):
+        print('Message from {0.author}: {0.content}'.format(message))
 token = os.environ.get('BOT_TOKEN')
 client.run(token)
