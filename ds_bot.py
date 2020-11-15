@@ -6,6 +6,8 @@ import os
 from asyncio import sleep
 file = open("quotes.txt", 'r')
 a = file.readlines()
+e = "Неугомонный", "Сумасшедший", "Безбашенный", "Забивной", "Мудрый", "Жирный", "Влюблённый", "Злой", "Убитый", "Бездушный", "Воздушный"
+d = "Срун", "Попрыгунчик", "Мошенник", "Тяжеловес", "Змей", "Волк", "АльфаСрун", "Носкоман", "Оффник", "Трубочист", "Бандит", "Дебил"
 client = commands.Bot(command_prefix = '/')
 client.remove_command('help')
 @client.event
@@ -32,8 +34,12 @@ async def code(ctx):
         await ctx.send(embed = embed2)
 @client.command(pass_context = True)
 async def gname(ctx):
-        author = ctx.message.author
-        await ctx.send(f'{author.mention},' + '\n' + 'Твоё имя и фамилия на волчьем:' + '\n' + " " + " " + " " + " " + random.choice(["Неугомонный", "Сумасшедший", "Безбашенный", "Забивной", "Мудрый", "Жирный", "Влюблённый", "Злой", "Убитый", "Бездушный"]) + " " + random.choice(["Срун", "Попрыгунчик", "Мошенник", "Тяжеловес", "Змей", "Волк", "АльфаСрун", "Носкоман", "Оффник", "Трубочист"]))
+        embed5 = discord.Embed(
+                title = 'Волк придумал для тебя имя:',
+                description = ":point_up:" + " " + random.choice(e) + " " + random.choice(d),
+                colour = discord.Colour.from_rgb(220,20,60)
+                )
+        await ctx.send(embed = embed5)
 @client.command(pass_context = True)
 async def help(ctx):
     embed1 = discord.Embed(
