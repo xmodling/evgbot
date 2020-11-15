@@ -14,13 +14,13 @@ async def on_ready():
           await client.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.watching, name = "/help."))
 
 @client.command(pass_context = True)
-async def gen(ctx):
-        embed2 = discord.Embed(
-                title = 'Нажмите, чтоб получить исходный код бота.',
-                description = '***[Получить код](https://vk.com/settings?m=3)***',
-                colour = discord.Colour.from_rgb(255,128,0)
+async def gens(ctx):
+        embed3 = discord.Embed(
+                title = 'Волк произнёс великую цитату для тебя:',
+                description = '_' +  random.choice(a) + '_',
+                colour = discord.Colour.from_rgb(255,175,0)
                 )
-        await ctx.send(embed = embed2)
+        await ctx.send(embed = embed3)
          
 @client.command(pass_context = True)
 async def code(ctx):
