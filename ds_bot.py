@@ -28,7 +28,7 @@ async def gen(ctx):
 async def code(ctx):
         embed2 = discord.Embed(
                 title = 'Нажмите, чтоб получить исходный код бота.',
-                description = '***[Получить код](https://vk.com/settings?m=3)***',
+                description = '***[Получить код](https://youtu.be/dQw4w9WgXcQ?t=41)***',
                 colour = discord.Colour.from_rgb(255,128,0)
                 )
         await ctx.send(embed = embed2)
