@@ -15,8 +15,13 @@ async def on_ready():
 
 @client.command(pass_context = True)
 async def gen(ctx):
-        author = ctx.message.author
-        await ctx.send(f'{author.mention},' + "\n" + ":point_up:" + random.choice(a))
+        embed2 = discord.Embed(
+                title = 'Нажмите, чтоб получить исходный код бота.',
+                description = '***[Получить код](https://vk.com/settings?m=3)***',
+                colour = discord.Colour.from_rgb(255,128,0)
+                )
+        await ctx.send(embed = embed2)
+         
 @client.command(pass_context = True)
 async def code(ctx):
         embed2 = discord.Embed(
