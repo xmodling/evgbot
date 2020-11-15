@@ -14,7 +14,7 @@ async def on_ready():
           await client.change_presence(status=discord.Status.online, activity=discord.Activity(type=discord.ActivityType.watching, name = "/help."))
 
 @client.command(pass_context = True)
-async def gens(ctx):
+async def gen(ctx):
         embed3 = discord.Embed(
                 title = 'Волк произнёс великую цитату для тебя:',
                 description = '_' +  random.choice(a) + '_',
