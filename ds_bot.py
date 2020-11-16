@@ -16,14 +16,6 @@ client.remove_command('help')
 
 from random import choice
 
-@client.command(pass_context = True)
-async def help(ctx):
-    embed1 = discord.Embed(
-        title = '**Команды от волка:**',
-        description = '**/help**' + '\n' + '*Выводит окно с командами.*' + '\n' + '\n' + '**/gen**' + '\n' + '***Рандомная цитата от волка, способная взорвать твой мозг.***' + '\n' + '\n' + '**/gname**' + '\n'  + '***Узнать своё имя на волчьем(Волк сам придумает).***' + '\n' + '\n' + '**/code**' + '\n' + '***Получить исходный код бота.***',
-        colour = discord.Colour.from_rgb(128, 0, 255)
-    )
-    await ctx.send(embed=embed1)
 
 youtube_dl.utils.bug_reports_message = lambda: ''
 
@@ -69,14 +61,9 @@ class YTDLSource(discord.PCMVolumeTransformer):
         return cls(discord.FFmpegPCMAudio(filename, **ffmpeg_options), data=data)
 
 
-client = commands.Bot(command_prefix='/')
-
 queue = []
 
-@client.event
-async def on_ready():
-    change_status.start()
-    print('Bot is online!')
+
 
 @client.event
 async def on_member_join(member):
@@ -186,6 +173,14 @@ async def gname(ctx):
                 colour = discord.Colour.from_rgb(220,20,60)
                 )
         await ctx.send(embed = embed5)
+@client.command(pass_context = True)
+async def help(ctx):
+    embed1 = discord.Embed(
+        title = '**Команды от волка:**',
+        description = '**/help**' + '\n' + '*Выводит окно с командами.*' + '\n' + '\n' + '**/gen**' + '\n' + '***Рандомная цитата от волка, способная взорвать твой мозг.***' + '\n' + '\n' + '**/gname**' + '\n'  + '***Узнать своё имя на волчьем(Волк сам придумает).***' + '\n' + '\n' + '**/code**' + '\n' + '***Получить исходный код бота.***',
+        colour = discord.Colour.from_rgb(128, 0, 255)
+    )
+    await ctx.send(embed=embed1)
 
 
 token = os.environ.get('BOT_TOKEN')
