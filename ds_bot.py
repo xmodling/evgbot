@@ -78,7 +78,7 @@ async def on_member_join(member):
 @client.command(name='join')
 async def join(ctx):
     if not ctx.message.author.voice:
-        await ctx.send("Вы должны быть подключены к голосовому чату!")
+        await ctx.send("Вы должны быть подключены к голoсовому чату!")
         return
     
     else:
