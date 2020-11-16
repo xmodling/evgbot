@@ -17,6 +17,15 @@ mschelp = 'join, /leave, /pause, /play, /queue, /remove,  /resume,  /stop, /view
 
 from random import choice
 
+@client.command(pass_context = True)
+async def help(ctx):
+    embed1 = discord.Embed(
+        title = '**Команды от волка:**',
+        description = '**/help**' + '\n' + '*Выводит окно с командами.*' + '\n' + '\n' + '**/gen**' + '\n' + '***Рандомная цитата от волка, способная взорвать твой мозг.***' + '\n' + '\n' + '**/gname**' + '\n'  + '***Узнать своё имя на волчьем(Волк сам придумает).***' + '\n' + '\n' + '**/code**' + '\n' + '***Получить исходный код бота.***' + mschelp,
+        colour = discord.Colour.from_rgb(128, 0, 255)
+    )
+    await ctx.send(embed=embed1)
+
 youtube_dl.utils.bug_reports_message = lambda: ''
 
 ytdl_format_options = {
@@ -178,14 +187,7 @@ async def gname(ctx):
                 colour = discord.Colour.from_rgb(220,20,60)
                 )
         await ctx.send(embed = embed5)
-@client.command(pass_context = True)
-async def help(ctx):
-    embed1 = discord.Embed(
-        title = '**Команды от волка:**',
-        description = '**/help**' + '\n' + '*Выводит окно с командами.*' + '\n' + '\n' + '**/gen**' + '\n' + '***Рандомная цитата от волка, способная взорвать твой мозг.***' + '\n' + '\n' + '**/gname**' + '\n'  + '***Узнать своё имя на волчьем(Волк сам придумает).***' + '\n' + '\n' + '**/code**' + '\n' + '***Получить исходный код бота.***' + mschelp,
-        colour = discord.Colour.from_rgb(128, 0, 255)
-    )
-    await ctx.send(embed=embed1)
+
 
 token = os.environ.get('BOT_TOKEN')
 client.run(token)
