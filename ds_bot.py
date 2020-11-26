@@ -47,7 +47,7 @@ async def code(ctx):
 async def gname(ctx):
         embed5 = discord.Embed(
                 title = 'Волк придумал для тебя имя:',
-                description = ":point_up:" + " " + random.choice(e) + " " + random.choice(d),
+                description = "***" + " " + random.choice(e) + " " + random.choice(d) + "***",
                 colour = discord.Colour.from_rgb(220,20,60)
                 )
         await ctx.send(embed = embed5)
