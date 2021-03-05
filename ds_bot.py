@@ -28,6 +28,7 @@ async def on_ready():
 
 @client.command(pass_context = True)
 async def gen(ctx):
+        print(ctx)
         embed3 = discord.Embed(
                 title = 'Волк произнёс великую цитату для тебя:',
                 description = '_' +  random.choice(a) + '_',
