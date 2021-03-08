@@ -8,7 +8,7 @@ from asyncio import sleep
 from discord.ext import commands, tasks
 from discord.voice_client import VoiceClient
 import youtube_dl
-with open('static/quotes.json', 'r', encoding = 'utf-8') as f:
+with open('quotes.json', 'r', encoding = 'utf-8') as f:
             quotes = json.load(f)
 e = "Неугомонный", "Сумасшедший", "Безбашенный", "Забивной", "Мудрый", "Жирный", "Влюблённый", "Злой", "Убитый", "Бездушный", "Воздушный", "Абсолютный", "Адский", "Бешеный", "Горячий", "Хладнокровный", "Товарищ"
 d = "Срун", "Попрыгунчик", "Мошенник", "Тяжеловес", "Змей", "Волк", "Альфасрун", "Носкоман", "Оффник", "Трубочист", "Бандит", "Дебил", "Ублюдок", "Бог", "Школьник", "Козёл", "Орган", "Бот", "Интеллектуал", "Мальчик"
