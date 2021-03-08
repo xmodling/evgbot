@@ -5,11 +5,11 @@ from discord.ext import commands
 import random
 import os
 from asyncio import sleep
-file = open("quotes.txt", 'r')
 from discord.ext import commands, tasks
 from discord.voice_client import VoiceClient
 import youtube_dl
-a = file.readlines()
+with open('static/quotes.json', 'r', encoding = 'utf-8') as f:
+            quotes = json.load(f)
 e = "Неугомонный", "Сумасшедший", "Безбашенный", "Забивной", "Мудрый", "Жирный", "Влюблённый", "Злой", "Убитый", "Бездушный", "Воздушный", "Абсолютный", "Адский", "Бешеный", "Горячий", "Хладнокровный", "Товарищ"
 d = "Срун", "Попрыгунчик", "Мошенник", "Тяжеловес", "Змей", "Волк", "Альфасрун", "Носкоман", "Оффник", "Трубочист", "Бандит", "Дебил", "Ублюдок", "Бог", "Школьник", "Козёл", "Орган", "Бот", "Интеллектуал", "Мальчик"
 client = commands.Bot(command_prefix = '/')
@@ -31,7 +31,7 @@ async def quote(ctx):
         print(ctx)
         embed3 = discord.Embed(
                 title = 'Волк произнёс великую цитату для тебя:',
-                description = '_' +  random.choice(a) + '_',
+                description = '_' +  random.choice(quotes) + '_',
                 colour = discord.Colour.from_rgb(255,175,0)
                 )
         await ctx.send(embed = embed3)
@@ -48,7 +48,7 @@ async def code(ctx):
 async def gname(ctx):
         embed5 = discord.Embed(
                 title = 'Волк придумал для тебя имя:',
-                description = "***" + " " + random.choice(e) + " " + random.choice(d) + "***",
+                description = f"***{random.choice(e)} {random.choice(d)}***",
                 colour = discord.Colour.from_rgb(220,20,60)
                 )
         await ctx.send(embed = embed5)
