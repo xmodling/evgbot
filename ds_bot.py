@@ -2,12 +2,9 @@
 # Скрипт написан в развлекательных целях, поэтому не нужно ничего критиковать, бот полностью готов и вряд ли будет меняться.
 import discord
 from discord.ext import commands
-import random
-import os
+import random, os, json
 from asyncio import sleep
 from discord.ext import commands, tasks
-from discord.voice_client import VoiceClient
-import youtube_dl
 with open('quotes.json', 'r', encoding = 'utf-8') as f:
             quotes = json.load(f)
 e = "Неугомонный", "Сумасшедший", "Безбашенный", "Забивной", "Мудрый", "Жирный", "Влюблённый", "Злой", "Убитый", "Бездушный", "Воздушный", "Абсолютный", "Адский", "Бешеный", "Горячий", "Хладнокровный", "Товарищ"
